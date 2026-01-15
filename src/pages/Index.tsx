@@ -1,7 +1,7 @@
 import { MobileBottomBar } from "@/components/sections/mobile-bar";
 import { TopBar } from "@/components/sections/top-bar";
 import { BeforeAfterResults } from "@/components/sections/before-after";
-import { Hero } from "@/components/sections/hero";
+import { Hero } from "@/components/sections/Hero";
 import { RealStories } from "@/components/sections/real-stories";
 import { DrRecomendation } from "@/components/sections/dr-recomendation";
 import { Problems } from "@/components/sections/problems";
