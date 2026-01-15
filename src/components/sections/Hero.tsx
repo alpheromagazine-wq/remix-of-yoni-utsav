@@ -45,10 +45,10 @@ export const Hero = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight md:leading-snug mb-2">
-              <span className="text-gradient">क्या आपकी</span> शादी करीब है? <br className="hidden md:block" />
-              या फिर <span className="text-gradient">पार्टनर से</span> रिश्ते में <br className="hidden md:block" />
+              <span className="text-gradient">क्या आपकी</span> शादी/रिश्ता करीब है? <br className="hidden md:block" />
+              और <span className="text-gradient">प्राइवेट डार्कनेस</span> या <span className="text-gradient">ढीलापन</span> सोचकर <br className="hidden md:block" />
               <span className="relative inline-block mt-1 md:mt-0">
-                <span className="text-gradient">खुशियां चाहिए?</span>
+                <span className="text-gradient">शर्म, डर या झिझक</span> महसूस होती है?
                 <svg className="absolute -bottom-1 md:-bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
                   <path d="M2 10C50 2 150 2 198 10" stroke="hsl(var(--primary))" strokeWidth="6" strokeLinecap="round" opacity="0.4" />
                 </svg>
@@ -60,6 +60,10 @@ export const Hero = () => {
               <br className="hidden md:block" />
               <span className="text-gradient font-bold">प्राइवेट पार्ट</span> की डार्कनेस खत्म करो – <br className="hidden md:block" />
               <span className="text-gradient font-bold text-lg md:text-xl mt-1 inline-block">सिर्फ 15 दिनों में!</span>
+            </p>
+
+            <p className="text-sm md:text-base font-medium text-foreground/80 max-w-lg mx-auto lg:mx-0">
+              15 दिनों में राहत महसूस करें, confidence वापस लाएं — और खुद को बिना शर्म के अपनाएं।
             </p>
 
             {/* Product Image - Mobile */}
@@ -122,14 +126,17 @@ export const Hero = () => {
                 अभी ऑर्डर करें - {PRODUCT_DETAILS.currencySymbol}{PRODUCT_DETAILS.price}
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </button>
+              <p className="mt-2 text-xs md:text-sm font-semibold text-center text-primary">
+                आज का ऑफर: लिमिटेड स्टॉक — देरी न करें
+              </p>
               <div className="flex items-center justify-center gap-4 mt-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <Shield className="w-4 h-4 text-primary" />
-                  Safe Payment
+                  Privacy + Safety Promise
                 </span>
                 <span className="flex items-center gap-1">
                   <Truck className="w-4 h-4 text-primary" />
-                  Free Delivery
+                  Female Trusted • Discreet
                 </span>
               </div>
             </div>
