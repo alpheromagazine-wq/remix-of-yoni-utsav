@@ -10,6 +10,7 @@ import { WhyOccurs } from "@/components/sections/why-occurs";
 import { WhyCommonSolutionNotWork } from "@/components/sections/why-common-solution-not-work";
 import { WhyOurProductIsBetter } from "@/components/sections/why-our-product-is-better";
 import { HowItWorks } from "@/components/sections/how-it-works";
+import { WhyReYoniVsTraditional } from "@/components/sections/why-reyoni-vs-traditional";
 import { FooterCta } from "@/components/sections/footer-cta";
 import { Footer } from "@/components/footer";
 import { OrderBlock } from "@/components/sections/order-block";
@@ -39,6 +40,7 @@ const Index = () => {
         <WhyCommonSolutionNotWork />
         <WhyOurProductIsBetter />
         <HowItWorks />
+        <WhyReYoniVsTraditional />
         <HowToUse />
         <ResultTimeline />
         <Ingredients />
