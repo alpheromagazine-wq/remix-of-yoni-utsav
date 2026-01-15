@@ -62,6 +62,10 @@ export const Hero = () => {
               <span className="text-gradient font-bold text-lg md:text-xl mt-1 inline-block">सिर्फ 15 दिनों में!</span>
             </p>
 
+            <p className="text-sm md:text-base font-medium text-foreground/80 max-w-lg mx-auto lg:mx-0">
+              15 दिनों में राहत महसूस करें, confidence वापस लाएं — और खुद को बिना शर्म के अपनाएं।
+            </p>
+
             {/* Product Image - Mobile */}
             <div className="relative z-10 animate-float w-full max-w-[480px] mx-auto lg:hidden">
               <div className="aspect-4/5 sm:aspect-square bg-white rounded-[2.5rem] p-4 shadow-xl shadow-red-500/20 relative overflow-hidden group border border-primary/5">
@@ -107,11 +111,17 @@ export const Hero = () => {
             <div className="bg-white relative z-10 rounded-3xl p-6 shadow-xl shadow-red-500/20 max-w-md mx-auto lg:mx-0">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                    <p className="text-sm text-muted-foreground line-through">MRP: {PRODUCT_DETAILS.currencySymbol}{PRODUCT_DETAILS.mrp.toLocaleString()}</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">{PRODUCT_DETAILS.currencySymbol}{PRODUCT_DETAILS.price.toLocaleString()}</span>
-                      <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full shrink-0">{PRODUCT_DETAILS.discountPercent}% OFF</span>
-                    </div>
+                  <p className="text-sm text-muted-foreground line-through">
+                    MRP: {PRODUCT_DETAILS.currencySymbol}
+                    {PRODUCT_DETAILS.mrp.toLocaleString()}
+                  </p>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold text-primary">
+                      {PRODUCT_DETAILS.currencySymbol}
+                      {PRODUCT_DETAILS.price.toLocaleString()}
+                    </span>
+                    <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full shrink-0">{PRODUCT_DETAILS.discountPercent}% OFF</span>
+                  </div>
                 </div>
                 <div className="text-right">
                   <p className="text-xs text-muted-foreground">Limited Time Offer</p>
@@ -119,9 +129,11 @@ export const Hero = () => {
                 </div>
               </div>
               <button onClick={openOrderDialog} className="btn-primary w-full cursor-pointer">
-                अभी ऑर्डर करें - {PRODUCT_DETAILS.currencySymbol}{PRODUCT_DETAILS.price}
+                अभी ऑर्डर करें - {PRODUCT_DETAILS.currencySymbol}
+                {PRODUCT_DETAILS.price}
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </button>
+              <p className="mt-2 text-xs md:text-sm font-semibold text-center text-primary">आज का ऑफर: लिमिटेड स्टॉक — देरी न करें</p>
               <div className="flex items-center justify-center gap-4 mt-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <Shield className="w-4 h-4 text-primary" />
