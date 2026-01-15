@@ -1,26 +1,25 @@
 import { ShieldCheck, PackageCheck, Truck, Stethoscope } from "lucide-react";
 
 import doctorImage from "@/assets/doctor.webp";
-import guaranteeImage from "@/assets/cert-guarantee.webp";
 import { Card } from "@/components/ui/card";
 
 const privacyBadges = [
   {
-    title: "Discreet Packaging",
-    description: "बाहर से product का कोई mention नहीं",
+    title: "डिस्क्रीट पैकिंग",
+    description: "बाहर से प्रोडक्ट का कोई संकेत नहीं होता",
     Icon: PackageCheck,
   },
   {
-    title: "Privacy First",
-    description: "आपकी details confidential रहती हैं",
+    title: "100% प्राइवेसी",
+    description: "आपकी जानकारी पूरी तरह सुरक्षित और गोपनीय रहती है",
     Icon: ShieldCheck,
   },
 ];
 
 const deliverySteps = [
-  { title: "Order confirm", description: "Call/WhatsApp verification (optional)" },
-  { title: "Packed discreetly", description: "Secure, plain outer box" },
-  { title: "Delivered", description: "Fast delivery to your address" },
+  { title: "ऑर्डर कन्फर्म", description: "आपका ऑर्डर तुरंत कन्फर्म किया जाता है" },
+  { title: "डिस्क्रीट पैकिंग", description: "सादा बाहरी बॉक्स में सुरक्षित पैकिंग" },
+  { title: "फास्ट डिलीवरी", description: "जल्दी डिलीवरी आपके पते तक" },
 ];
 
 export function TrustSection() {
@@ -32,9 +31,11 @@ export function TrustSection() {
       <div className="container-custom relative py-14">
         <div className="mx-auto max-w-5xl">
           <header className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">Trust, Privacy & Delivery</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              भरोसा, प्राइवेसी और डिलीवरी
+            </h2>
             <p className="mt-4 text-base text-muted-foreground">
-              आप order करें—बाकी care हम करते हैं: privacy, packing, और delivery तक।
+              आप बस ऑर्डर करें—बाकी हम संभाल लेते हैं: पूरी प्राइवेसी, डिस्क्रीट पैकिंग और सुरक्षित डिलीवरी।
             </p>
           </header>
 
@@ -44,28 +45,28 @@ export function TrustSection() {
               <div className="flex items-start gap-4">
                 <img
                   src={doctorImage}
-                  alt="Doctor recommendation"
+                  alt="डॉक्टर की सलाह"
                   className="h-14 w-14 rounded-2xl object-cover"
                   loading="lazy"
                 />
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <Stethoscope className="h-4 w-4 text-primary" />
-                    <p className="text-sm font-semibold text-foreground">Doctor note</p>
+                    <p className="text-sm font-semibold text-foreground">डॉक्टर की छोटी-सी सलाह</p>
                   </div>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-                    “Gentle at-home care works best when it’s consistent and stress-free. Keep it simple, keep it private.”
+                    “अगर routine simple और consistent रहे, तो घर पर care ज़्यादा comfortable लगता है—बिना तनाव, बिना झिझक।”
                   </p>
                 </div>
               </div>
-              <p className="mt-4 text-xs text-muted-foreground">For reassurance & comfort-focused guidance.</p>
+              <p className="mt-4 text-xs text-muted-foreground">कम्फर्ट-फर्स्ट guidance—आपके confidence के लिए।</p>
             </Card>
 
             {/* Privacy badges */}
             <Card className="rounded-3xl border-primary/10 bg-card/70 p-6 shadow-soft backdrop-blur">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-primary" />
-                <p className="text-sm font-semibold text-foreground">Privacy badges</p>
+                <p className="text-sm font-semibold text-foreground">प्राइवेसी की गारंटी</p>
               </div>
 
               <div className="mt-4 grid gap-3">
@@ -85,19 +86,11 @@ export function TrustSection() {
               </div>
             </Card>
 
-            {/* Delivery timeline + guarantee */}
+            {/* Delivery timeline */}
             <Card className="rounded-3xl border-primary/10 bg-card/70 p-6 shadow-soft backdrop-blur">
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <Truck className="h-4 w-4 text-primary" />
-                  <p className="text-sm font-semibold text-foreground">Delivery timeline</p>
-                </div>
-                <img
-                  src={guaranteeImage}
-                  alt="Satisfaction guarantee certificate"
-                  className="h-10 w-auto rounded-md"
-                  loading="lazy"
-                />
+              <div className="flex items-center gap-2">
+                <Truck className="h-4 w-4 text-primary" />
+                <p className="text-sm font-semibold text-foreground">डिलीवरी टाइमलाइन</p>
               </div>
 
               <ol className="mt-4 space-y-3">
@@ -115,8 +108,8 @@ export function TrustSection() {
               </ol>
 
               <div className="mt-4 rounded-2xl border border-primary/15 bg-primary/5 p-4">
-                <p className="text-xs font-medium text-foreground">100% Satisfaction Guarantee</p>
-                <p className="mt-1 text-xs text-muted-foreground">Peace of mind—your experience matters.</p>
+                <p className="text-xs font-medium text-foreground">बिना असहज कॉल, बिना उलझन</p>
+                <p className="mt-1 text-xs text-muted-foreground">सरल प्रक्रिया—पूरी प्राइवेसी के साथ, शुरू से अंत तक।</p>
               </div>
             </Card>
           </div>
