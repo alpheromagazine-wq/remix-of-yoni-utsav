@@ -1,4 +1,7 @@
-import { MessageSquareQuote, Star, ArrowRight } from "lucide-react";
+import { CircleCheckBig, Heart, MessageSquareQuote, Quote, Smile, Sparkles, Star } from "lucide-react";
+import { Badge } from "../ui/badge";
+import { Card } from "../ui/card";
+import { useOrderDialog } from "@/contexts/order-dialog-context";
 
 const testimonials = [
   {
@@ -7,7 +10,7 @@ const testimonials = [
     city: "28 साल, मुंबई",
     text: '"मेरी शादी 3 महीने बाद थी और मैं बहुत परेशान थी। <span class="font-bold text-foreground">बिकिनी एरिया का कालापन</span> मुझे रात भर सोने नहीं देता था। ReYoni का इस्तेमाल करने के बाद <span class="font-bold text-primary">सिर्फ 15 दिनों में</span> मुझे फर्क दिखने लगा। आज मैं पूरी तरह <span class="font-bold">confident</span> हूं!"',
     rating: 5,
-    icon: "heart"
+    icon: "heart",
   },
   {
     name: "अनीता वर्मा",
@@ -15,7 +18,7 @@ const testimonials = [
     city: "32 साल, दिल्ली",
     text: '"डिलीवरी के बाद मुझे <span class="font-bold text-foreground">vaginal looseness</span> की बहुत परेशानी थी। पार्टनर के साथ <span class="font-bold text-foreground">intimacy</span> में कमी आ गई थी और मैं बहुत depressed थी। ReYoni ने मेरी ज़िंदगी बदल दी! <span class="font-bold text-primary">3 हफ्तों में ही</span> मुझे और मेरे पार्टनर को बहुत फर्क महसूस हुआ। Thank you so much!"',
     rating: 5,
-    icon: "sparkles"
+    icon: "sparkles",
   },
   {
     name: "रीना पटेल",
@@ -23,7 +26,7 @@ const testimonials = [
     city: "26 साल, बैंगलोर",
     text: '"मैं बीच पर <span class="font-bold text-foreground">bikini</span> पहनने से डरती थी क्योंकि <span class="font-bold text-foreground">प्राइवेट पार्ट्स का कालापन</span> बहुत ज्यादा था। मैंने बहुत सारे products try किए लेकिन कुछ काम नहीं आया। ReYoni के साथ <span class="font-bold text-primary">2 हफ्तों में</span> मुझे असली फर्क दिखा! अब मैं हर तरह के कपड़े पहनने में confident हूं। इससे बेहतर कुछ नहीं!"',
     rating: 5,
-    icon: "heart"
+    icon: "heart",
   },
   {
     name: "नेहा गुप्ता",
@@ -31,7 +34,7 @@ const testimonials = [
     city: "30 साल, पुणे",
     text: '"शादी के 5 साल बाद मेरा <span class="font-bold text-foreground">relationship</span> अच्छा नहीं चल रहा था। <span class="font-bold text-foreground">Intimacy issues</span> की वजह से मैं और मेरे पति में दूरी बढ़ती जा रही थी। ReYoni ने हमारी शादी बचा ली! <span class="font-bold text-primary">अब हम पहले से ज्यादा खुश हैं।</span> यह product वाकई जादू है। Every married woman should try this!"',
     rating: 5,
-    icon: "heart"
+    icon: "heart",
   },
   {
     name: "सिमरन कौर",
@@ -39,7 +42,7 @@ const testimonials = [
     city: "24 साल, चंडीगढ़",
     text: '"मैं <span class="font-bold text-foreground">gym</span> जाती हूं और अक्सर <span class="font-bold text-foreground">tight clothes</span> पहनती हूं। लेकिन बिकिनी एरिया की <span class="font-bold text-foreground">darkness</span> मुझे बहुत uncomfortable feel करवाती थी। मैंने ReYoni try किया और <span class="font-bold text-primary">10 दिनों में ही</span> फर्क देखने को मिला! अब मैं किसी भी तरह के कपड़े पहनने में confident हूं। Highly recommended!"',
     rating: 5,
-    icon: "heart"
+    icon: "heart",
   },
   {
     name: "मीरा देसाई",
@@ -47,82 +50,94 @@ const testimonials = [
     city: "35 साल, अहमदाबाद",
     text: '"दो बच्चों के बाद मुझे लगता था कि अब मैं कभी पहले जैसी नहीं हो सकती। लेकिन ReYoni ने मुझे गलत साबित कर दिया! <span class="font-bold text-primary">महीने में</span> मुझे ऐसा लगा जैसे मैं फिर से young हूं। मेरा confidence वापस आ गया है और मेरी personal life भी बहुत improve हुई है। हर महिला को यह try करना चाहिए!"',
     rating: 5,
-    icon: "smile"
-  }
+    icon: "smile",
+  },
 ];
 
-export const CustomerStories = () => {
+export function RealStories() {
+  const { openOrderDialog } = useOrderDialog();
   return (
-    <section className="section-padding bg-gradient-to-b from-background via-secondary/10 to-background">
-      <div className="container-custom">
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full mb-6">
-            <MessageSquareQuote className="w-5 h-5" />
-            <span className="text-sm font-bold uppercase tracking-wider">असली कहानियां</span>
-          </div>
-          
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6">
-            <span className="text-gradient">महिलाओं की</span> अपनी जुबानी<br />
-            <span className="relative inline-block">
-              उनकी सच्ची कहानी
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
-                <path d="M2 10C50 2 150 2 198 10" stroke="hsl(var(--primary))" strokeWidth="6" strokeLinecap="round" opacity="0.4" />
-              </svg>
-            </span>
+    <section className="section-padding bg-background relative overflow-hidden">
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-16">
+          <Badge className="bg-primary/10 text-primary hover:bg-primary/10 px-4 py-2 rounded-full mb-4 flex items-center gap-2 w-fit mx-auto">
+            <MessageSquareQuote className="w-4 h-4" />
+            Real Stories
+          </Badge>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+            <span className="text-gradient">50,000+</span> महिलाओं की
+            <br />
+            ज़िन्दगी बदली
           </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            जो महिलाएं पहले शर्मिंदा थीं, आज <span className="text-gradient font-bold">confident</span> हैं।<br />
-            पढ़िए उनकी अपनी कहानी, अपनी जुबानी...
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto flex items-center justify-center gap-2">
+            Real women, real results, real happiness
+            <Heart className="w-5 h-5 text-primary fill-primary" />
           </p>
         </div>
 
-        {/* Social Proof Banner */}
-        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8 md:p-12 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              आप अकेली नहीं हैं - <span className="text-gradient">हजारों महिलाएं</span> बदलाव ला चुकी हैं!
-            </h3>
-            <p className="text-muted-foreground mb-6 text-lg">
-              हर दिन <span className="font-bold text-foreground">500+ महिलाएं</span> ReYoni से अपनी ज़िंदगी बदल रही हैं।
-              <br />
-              अब आपकी बारी है!
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">4.9/5</div>
-                <div className="text-sm text-muted-foreground">Average Rating</div>
-                <div className="flex justify-center mt-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="card-elevated space-y-4 relative hover:shadow-glow transition-all duration-300 border-primary/20">
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
+
+              <div className="flex items-center gap-1">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+
+              <div className="text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: testimonial.text }} />
+              {testimonial.icon === "heart" && <Heart className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
+              {testimonial.icon === "sparkles" && <Sparkles className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
+              {testimonial.icon === "smile" && <Smile className="w-4 h-4 text-primary inline-block ml-1" />}
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-linear-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold">{testimonial.initial}</span>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold">{testimonial.name}</span>
+                    <CircleCheckBig className="w-4 h-4 text-green-500" />
+                  </div>
+                  <p className="text-sm text-muted-foreground">{testimonial.city}</p>
                 </div>
               </div>
-              
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">50K+</div>
-                <div className="text-sm text-muted-foreground">Happy Customers</div>
-              </div>
-              
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">97%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
-              </div>
-              
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">15 दिन</div>
-                <div className="text-sm text-muted-foreground">Average Results</div>
-              </div>
-            </div>
+            </Card>
+          ))}
+        </div>
 
-            <button className="btn-primary group">
-              मैं भी बदलाव चाहती हूं!
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </button>
+        {/* Stats Section */}
+        <div className="mt-16 bg-linear-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-gradient">50,000+</p>
+              <p className="text-sm text-muted-foreground mt-1">Happy Customers</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-gradient">4.9/5</p>
+              <p className="text-sm text-muted-foreground mt-1">Average Rating</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-gradient">98%</p>
+              <p className="text-sm text-muted-foreground mt-1">Would Recommend</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-gradient">2 Weeks</p>
+              <p className="text-sm text-muted-foreground mt-1">Visible Results</p>
+            </div>
           </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <button onClick={openOrderDialog} className="btn-primary text-sm md:text-lg cursor-pointer">
+            Join 50,000+ Happy Women →
+          </button>
         </div>
       </div>
     </section>
   );
-};
+}

@@ -1,5 +1,7 @@
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import { Star, Sparkles, Shield, Clock, Heart, CheckCircle2, Users, TrendingUp, Smile, ArrowRight, Truck } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Star, Sparkles, Shield, Clock, Heart, CheckCircle2, Users, TrendingUp, Smile } from "lucide-react";
+import { LeadForm } from "@/components/lead-form";
 import before1 from "@/assets/before-1.jpg";
 import after1 from "@/assets/after-1.jpg";
 import before2 from "@/assets/before-2.jpg";
@@ -15,49 +17,26 @@ import after6 from "@/assets/after-6.jpg";
 
 export const BeforeAfterResults = () => {
   return (
-    <section className="section-padding bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
+    <section className="section-padding bg-linear-to-b from-background via-secondary/10 to-background relative overflow-hidden">
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl" />
-      
+
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full mb-6">
-            <Sparkles className="w-5 h-5" />
-            <span className="text-sm font-bold uppercase tracking-wider">सिद्ध परिणाम</span>
-          </div>
-          
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6">
-            <span className="text-gradient">असली महिलाओं के</span><br />
-            <span className="relative inline-block">
-              जादुई बदलाव
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
-                <path d="M2 10C50 2 150 2 198 10" stroke="hsl(var(--primary))" strokeWidth="6" strokeLinecap="round" opacity="0.4" />
-              </svg>
-            </span>
+        <div className="text-center mb-16">
+          <Badge className="bg-primary/10 text-primary hover:bg-primary/10 px-4 py-2 rounded-full mb-4 flex items-center gap-2 w-fit mx-auto">
+            <Sparkles className="w-4 h-4" />
+            सिद्ध परिणाम
+          </Badge>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+            <span className="text-gradient">असली महिलाओं के</span>
+            <br />
+            जादुई बदलाव
           </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            <span className="text-gradient font-bold">50,000+</span> से ज्यादा महिलाओं ने पहले ही अपनी 
-            <span className="font-bold text-foreground"> Confidence</span> वापस पा ली है। 
-            <span className="font-bold text-foreground"> खुद देखिए</span> असली नतीजे!
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto flex items-center justify-center gap-2">
+            Real women, real results, real happiness
+            <Heart className="w-5 h-5 text-primary fill-primary" />
           </p>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
-              <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm font-semibold">100% Real Results</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
-              <Users className="w-5 h-5 text-primary" />
-              <span className="text-sm font-semibold">50,000+ खुश ग्राहक</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <span className="text-sm font-semibold">97% Success Rate</span>
-            </div>
-          </div>
         </div>
 
         {/* Before/After Comparison Grid */}
@@ -86,7 +65,7 @@ export const BeforeAfterResults = () => {
           </div>
 
           {/* Result 2 */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <BeforeAfterSlider beforeImage={before2} afterImage={after2} />
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-3">
@@ -109,7 +88,7 @@ export const BeforeAfterResults = () => {
           </div>
 
           {/* Result 3 */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <BeforeAfterSlider beforeImage={before3} afterImage={after3} />
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-3">
@@ -132,7 +111,7 @@ export const BeforeAfterResults = () => {
           </div>
 
           {/* Result 4 */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <BeforeAfterSlider beforeImage={before4} afterImage={after4} />
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-3">
@@ -155,7 +134,7 @@ export const BeforeAfterResults = () => {
           </div>
 
           {/* Result 5 */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <BeforeAfterSlider beforeImage={before5} afterImage={after5} />
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-3">
@@ -178,7 +157,7 @@ export const BeforeAfterResults = () => {
           </div>
 
           {/* Result 6 */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <BeforeAfterSlider beforeImage={before6} afterImage={after6} />
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-3">
@@ -202,7 +181,7 @@ export const BeforeAfterResults = () => {
         </div>
 
         {/* Stats Banner */}
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-3xl p-8 md:p-12 shadow-2xl text-white mb-12">
+        <div className="bg-linear-to-r from-primary to-primary/80 rounded-3xl p-8 md:p-12 shadow-2xl text-white mb-12">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl md:text-5xl font-extrabold mb-2">50K+</div>
@@ -225,45 +204,9 @@ export const BeforeAfterResults = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               आप भी बनें <span className="text-gradient">Success Story!</span>
             </h3>
-            <p className="text-muted-foreground mb-6">
-              लाखों महिलाओं ने पहले ही अपनी ज़िंदगी बदल ली है। अब आपकी बारी है!
-            </p>
-            
-            <div className="bg-primary/5 rounded-2xl p-6 mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <p className="text-sm text-muted-foreground line-through">MRP: ₹4,980</p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-primary">₹2,490</span>
-                    <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">50% OFF</span>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-xs text-muted-foreground">Limited Time</p>
-                  <p className="text-sm font-medium text-primary">Free Shipping</p>
-                </div>
-              </div>
-              
-              <button className="btn-primary w-full group">
-                अभी ऑर्डर करें - ₹2490
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
+            <p className="text-muted-foreground mb-6">लाखों महिलाओं ने पहले ही अपनी ज़िंदगी बदल ली है। अब आपकी बारी है!</p>
 
-            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1">
-                <Shield className="w-4 h-4 text-primary" />
-                Safe Payment
-              </span>
-              <span className="flex items-center gap-1">
-                <Truck className="w-4 h-4 text-primary" />
-                Free Delivery
-              </span>
-              <span className="flex items-center gap-1">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                100% Original
-              </span>
-            </div>
+            <LeadForm showFeatures={false} />
           </div>
         </div>
       </div>
