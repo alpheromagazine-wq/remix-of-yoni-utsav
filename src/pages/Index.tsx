@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  // State management
   const [showMobileCTA, setShowMobileCTA] = useState(true);
   const [activeStep, setActiveStep] = useState(1);
 
