@@ -12,6 +12,7 @@ import { WhyOurProductIsBetter } from "@/components/sections/why-our-product-is-
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { WhyReYoniVsTraditional } from "@/components/sections/why-reyoni-vs-traditional";
 import { TrustSection } from "@/components/sections/trust-section";
+import { TrustBadgesStrip } from "@/components/sections/trust-badges-strip";
 import { FooterCta } from "@/components/sections/footer-cta";
 import { Footer } from "@/components/footer";
 import { OrderBlock } from "@/components/sections/order-block";
@@ -45,9 +46,9 @@ const Index = () => {
         <HowToUse />
         <ResultTimeline />
         <Ingredients />
+        <TrustBadgesStrip />
         <CustomerPrivacy />
         <TrustSection />
-        <OrderBlock />
         <Faqs />
         <FooterCta />
       </div>
