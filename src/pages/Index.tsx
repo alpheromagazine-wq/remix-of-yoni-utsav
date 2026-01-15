@@ -49,6 +49,7 @@ const Index = () => {
         <TrustBadgesStrip />
         <CustomerPrivacy />
         <TrustSection />
+        <OrderBlock />
         <Faqs />
         <FooterCta />
       </div>

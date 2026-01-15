@@ -137,7 +137,7 @@ export function DetailedBenefits() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">ReYoni के साथ पाएं विज्ञान और आयुर्वेद का अनोखा संगम।</p>
         </div>
 
-        <div className="space-y-12">
+        <div className="md:space-y-10 space-y-6">
           {benefits.map((benefit, index) => (
             <BenefitCard key={index} {...benefit} />
           ))}

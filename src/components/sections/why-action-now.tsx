@@ -33,7 +33,7 @@ export function WhyActionNow() {
         className="pointer-events-none absolute bottom-[-35%] right-[-20%] h-[520px] w-[520px] rounded-full bg-accent/15 blur-3xl"
       />
 
-      <div className="container-custom relative">
+      <div className="container-custom relative px-0">
         <header className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-2 text-sm font-semibold text-foreground shadow-sm ring-1 ring-primary/10">
             <AlertTriangle className="h-4 w-4 text-primary" aria-hidden="true" />

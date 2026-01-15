@@ -21,7 +21,7 @@ export const BeforeAfterResults = () => {
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl" />
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 px-0">
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary hover:bg-primary/10 px-4 py-2 rounded-full mb-4 flex items-center gap-2 w-fit mx-auto">
@@ -40,7 +40,7 @@ export const BeforeAfterResults = () => {
         </div>
 
         {/* Before/After Comparison Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 md:mb-12 mb-6">
           {/* Result 1 */}
           <div className="space-y-4 animate-fade-in">
             <BeforeAfterSlider beforeImage={before1} afterImage={after1} />
@@ -206,7 +206,7 @@ export const BeforeAfterResults = () => {
             </h3>
             <p className="text-muted-foreground mb-6">लाखों महिलाओं ने पहले ही अपनी ज़िंदगी बदल ली है। अब आपकी बारी है!</p>
 
-            <LeadForm showFeatures={false} />
+            <LeadForm showFeatures={false} showSecurityNote={false}/>
           </div>
         </div>
       </div>

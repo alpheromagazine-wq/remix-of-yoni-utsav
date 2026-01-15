@@ -6,11 +6,11 @@ export function Problems() {
   const { openOrderDialog } = useOrderDialog();
   return (
     <section className="section-padding bg-white relative">
-      <div className="container-custom">
+      <div className="container-custom px-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="inline-block bg-red-100 text-primary text-sm font-semibold px-4 py-2 rounded-full">🤔 क्या आप भी Face कर रही हैं?</span>
-            <h2 className="text-3xl md:text-4xl font-bold leading-[1.3]">
+            <h2 className="text-[1.5rem] md:text-4xl font-bold leading-[1.3]">
               ये Problems <span className="text-gradient inline-block pr-[5px]">Common हैं</span>
               <span className="inline-block"> , </span>
               <br />
@@ -140,7 +140,7 @@ export function Problems() {
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent rounded-3xl"></div>
-            <div className="relative bg-card rounded-3xl p-8 shadow-xl shadow-red-500/30 border border-primary/10">
+            <div className="relative bg-card rounded-3xl p-8 shadow-xl shadow-red-500/30 border border-primary/50">
               <div className="text-center mb-6">
                 <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-2 rounded-full mb-4">✅ The Solution</span>
                 <h3 className="text-2xl md:text-3xl font-bold">

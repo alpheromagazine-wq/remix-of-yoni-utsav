@@ -1,12 +1,12 @@
 export function WhyOccurs() {
   return (
     <section className="py-12 md:py-20 bg-background custom-mobile-spacing">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <span className="text-primary text-sm font-medium">यह समस्या क्यों होती है?</span>
             <h2 className="text-2xl md:text-4xl font-bold text-foreground mt-3 mb-4 leading-[1.3]">
-              समझिए
+              समझिए&nbsp;
               <span className="text-gradient inline-block">असली कारण</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">इसमें कोई शर्म नहीं — ये सामान्य शारीरिक बदलाव हैं जिनसे दुनिया भर में करोड़ों महिलाएं गुजरती हैं।</p>

@@ -7,7 +7,7 @@ export function OrderBlock() {
   const [phone, setPhone] = useState<string>();
   return (
     <section id="pricing" className="py-16 md:py-24 bg-white custom-mobile-spacing">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-block bg-destructive/10 text-destructive rounded-full px-4 py-2 text-sm font-medium mb-6 animate-pulse">🔥 Limited Time Offer — {PRODUCT_DETAILS.discountPercent}% OFF</div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 leading-[1.3]">

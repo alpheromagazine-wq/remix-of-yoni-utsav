@@ -7,7 +7,7 @@ export function Faqs() {
   const { openOrderDialog } = useOrderDialog();
   return (
     <section className="section-padding bg-background">
-      <div className="container-custom max-w-3xl">
+      <div className="container-custom max-w-3xl px-0">
         <div className="text-center mb-12">
           <Badge className="bg-primary/10 text-primary text-sm font-semibold px-4 py-2 mb-4">❓ Common Questions</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-[1.3]">

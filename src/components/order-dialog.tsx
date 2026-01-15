@@ -7,7 +7,7 @@ export function OrderDialog() {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && closeOrderDialog()}>
-      <DialogContent size="md" backdrop="blur">
+      <DialogContent size="md" backdrop="blur" className="max-w-[600px] w-full">
         <DialogHeader className="mb-4">
           <DialogTitle className="text-center text-xl font-bold">
             अपना ऑर्डर पूरा करें

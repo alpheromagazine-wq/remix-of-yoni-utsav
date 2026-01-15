@@ -154,7 +154,13 @@ export const Hero = () => {
             <div className="relative z-10 animate-float w-full max-w-[480px]">
               <div className="aspect-4/5 sm:aspect-square bg-white rounded-[2.5rem] p-4 shadow-xl shadow-red-500/20 relative overflow-hidden group border border-primary/5">
                 <div className="w-full h-full rounded-4xl overflow-hidden relative shadow-inner bg-cream/10">
-                  <img src={mainHeroImage} className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110" alt="ReYoni Premium Product" />
+                  <img
+                    src={mainHeroImage}
+                    fetchPriority="high"
+                    decoding="async"
+                    className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
+                    alt="ReYoni Premium Product"
+                  />
 
                   <div className="absolute top-5 left-5 z-20">
                     <div className="bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 border border-white/20">

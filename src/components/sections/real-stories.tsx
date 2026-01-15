@@ -61,7 +61,7 @@ export function RealStories() {
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 px-0">
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary hover:bg-primary/10 px-4 py-2 rounded-full mb-4 flex items-center gap-2 w-fit mx-auto">
             <MessageSquareQuote className="w-4 h-4" />
@@ -89,10 +89,12 @@ export function RealStories() {
                 ))}
               </div>
 
-              <div className="text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: testimonial.text }} />
-              {testimonial.icon === "heart" && <Heart className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
-              {testimonial.icon === "sparkles" && <Sparkles className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
-              {testimonial.icon === "smile" && <Smile className="w-4 h-4 text-primary inline-block ml-1" />}
+              <div className="text-foreground leading-relaxed">
+                <span dangerouslySetInnerHTML={{ __html: testimonial.text }} />
+                {testimonial.icon === "heart" && <Heart className="w-4 h-4 text-primary fill-primary inline-block shrink-0 align-middle ml-1.5 -translate-y-0.5" />}
+                {testimonial.icon === "sparkles" && <Sparkles className="w-4 h-4 text-primary fill-primary inline-block shrink-0 align-middle ml-1.5 -translate-y-0.5" />}
+                {testimonial.icon === "smile" && <Smile className="w-4 h-4 text-primary inline-block shrink-0 align-middle ml-1.5 -translate-y-0.5" />}
+              </div>
 
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-linear-to-br from-primary to-accent rounded-full flex items-center justify-center">

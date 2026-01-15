@@ -12,7 +12,7 @@ export function FooterCta() {
             <Sparkles className="w-4 h-4" />
             आज ही अपने आत्मविश्वास को बदलें
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.3]">
+          <h2 className="text-[1.7rem] wrap-break-word md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.3]">
             आप&nbsp;
             <span className="text-primary">खूबसूरत</span>,&nbsp;<span className="text-primary">आत्मविश्वासी&nbsp;</span>
             और&nbsp;

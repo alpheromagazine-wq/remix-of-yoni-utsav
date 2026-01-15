@@ -209,11 +209,11 @@ button {
   }
 
   .container-custom {
-    @apply max-w-6xl mx-auto;
+    @apply max-w-6xl mx-auto px-4;
   }
 
   .container-narrow {
-    @apply max-w-4xl mx-auto;
+    @apply max-w-4xl mx-auto px-4;
   }
 
   .text-gradient {

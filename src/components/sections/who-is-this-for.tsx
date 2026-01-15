@@ -54,7 +54,7 @@ export function WhoIsThisFor() {
       <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
 
-      <div className="container-custom relative">
+      <div className="container-custom relative px-0">
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary ring-1 ring-primary/10">
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
