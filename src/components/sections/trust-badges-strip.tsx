@@ -27,7 +27,7 @@ const badges = [
 
 export function TrustBadgesStrip() {
   return (
-    <section aria-label="Trust badges" className="bg-background">
+    <section aria-label="Trust badges" className="bg-section-gradient">
       <div className="container-custom py-8">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {badges.map(({ title, subtitle, Icon }) => (
