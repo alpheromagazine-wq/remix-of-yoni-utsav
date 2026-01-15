@@ -24,46 +24,16 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { 
-  Sparkles, 
-  Shield, 
-  Clock, 
-  Heart, 
-  Star, 
-  Phone,
-  CheckCircle2,
-  XCircle,
-  Lock,
-  Package,
-  Eye,
-  CreditCard,
-  Users,
-  TrendingUp,
-  Baby,
-  Gift,
-  Award,
-  Quote,
-  MessageSquareQuote,
-  CircleCheckBig,
-  Smile,
-  Check,
-  X,
-  CircleX,
-  ArrowRight,
-  Droplets,
-  Moon,
-  Headphones,
-  AlertCircle,
-  TriangleAlert,
-  Leaf,
-  ShieldCheck,
-  Truck
+  Sparkles, Shield, Clock, Heart, Star, Phone, CheckCircle2, XCircle, Lock,
+  Package, Eye, CreditCard, Users, TrendingUp, Baby, Gift, Award, Quote,
+  MessageSquareQuote, CircleCheckBig, Smile, Check, X, CircleX, ArrowRight,
+  Droplets, Moon, Headphones, AlertCircle, TriangleAlert, Leaf, ShieldCheck, Truck
 } from "lucide-react";
 
 const Index = () => {
   const [showMobileCTA, setShowMobileCTA] = useState(true);
   const [activeStep, setActiveStep] = useState(1);
 
-  // WhatsApp number - replace with actual number
   const whatsappNumber = "919876543210";
   const whatsappMessage = encodeURIComponent("मुझे इंटिमेट वेलनेस ट्रीटमेंट के बारे में जानकारी चाहिए");
 
@@ -122,19 +92,6 @@ const Index = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Top Bar */}
       <section className="bg-primary py-3 sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 text-primary-foreground">
-            <TriangleAlert className="h-5 w-5 animate-pulse flex-shrink-0" />
-            <p className="text-sm md:text-base font-medium text-center max-w-full w-[75%] md:w-fit">
-              <span className="font-bold">ध्यान दें:</span> 78% भारतीय महिलाएं इस समस्या से चुपचाप जूझ रही हैं — आज ही समाधान पाएं!
-            </p>
-            <TriangleAlert className="h-5 w-5 animate-pulse flex-shrink-0" />
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="bg-hero-gradient min-h-screen relative overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-40 right-10 w-40 h-40 bg-primary/15 rounded-full blur-3xl" />
         
@@ -2179,16 +2136,13 @@ const Index = () => {
               <p>
                 <strong className="text-foreground">Disclaimer:</strong> ReYoni is an external use product only. Do not apply internally. For external intimate areas only. Discontinue use if irritation occurs.
               </p>
-
               <p>
                 <strong className="text-foreground">Individual Results:</strong> Results may vary from person to person depending on skin type, consistency of use, and individual physiology. The testimonials shown represent individual experiences and may not reflect typical results.
               </p>
-
               <p>
                 <strong className="text-foreground">Medical Advice:</strong> This product is not intended to diagnose, treat, cure, or prevent any disease. If you have any medical conditions or concerns, please consult with a healthcare professional before use. Not suitable for use during pregnancy or breastfeeding without medical consultation.
               </p>
             </div>
-
             <div className="pt-6 border-t border-border text-xs text-muted-foreground">
               <p>
                 © 2025 ReYoni. All rights reserved. | For inquiries: <a href="mailto:support@reyoni.com" className="text-primary hover:underline">support@reyoni.com</a>
@@ -2219,7 +2173,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* WhatsApp Floating Button - Desktop */}
+      {/* WhatsApp Floating Button */}
       <a
         href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
         target="_blank"
