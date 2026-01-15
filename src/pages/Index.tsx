@@ -14,6 +14,7 @@ import { FooterCta } from "@/components/sections/footer-cta";
 import { Footer } from "@/components/footer";
 import { OrderBlock } from "@/components/sections/order-block";
 import { DetailedBenefits } from "@/components/sections/detailed-benefits";
+import { WhoIsThisFor } from "@/components/sections/who-is-this-for";
 import { Faqs } from "@/components/sections/faqs";
 import { Ingredients } from "@/components/sections/ingredients";
 import { CustomerPrivacy } from "@/components/sections/customer-privacy";
@@ -30,9 +31,9 @@ const Index = () => {
         <Hero />
         <WhyActionNow />
         <DetailedBenefits />
+        <WhoIsThisFor />
         <BeforeAfterResults />
         <RealStories />
-        <DrRecomendation />
         <Problems />
         <WhyOccurs />
         <WhyCommonSolutionNotWork />
