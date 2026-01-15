@@ -91,8 +91,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      {/* Top Bar */}
-      <section className="bg-primary py-3 sticky top-0 z-50">
+      {/* Top Bar - Sticky */}
+      <section className="bg-primary py-3 sticky top-0 z-50 shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-3 text-primary-foreground">
             <TriangleAlert className="h-5 w-5 animate-pulse flex-shrink-0" />
