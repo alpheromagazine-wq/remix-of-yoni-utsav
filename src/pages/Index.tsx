@@ -23,75 +23,58 @@ import after6 from "@/assets/after-6.jpg";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
-  Sparkles, Shield, Clock, Heart, Star, Phone, CheckCircle2, XCircle, Lock,
-  Package, Eye, CreditCard, Users, TrendingUp, Baby, Gift, Award, Quote,
-  MessageSquareQuote, CircleCheckBig, Smile, Check, X, CircleX, ArrowRight,
-  Droplets, Moon, Headphones, AlertCircle, TriangleAlert, Leaf, ShieldCheck, Truck
-} from "lucide-react";
+import { Sparkles, Shield, Clock, Heart, Star, Phone, CheckCircle2, XCircle, Lock, Package, Eye, CreditCard, Users, TrendingUp, Baby, Gift, Award, Quote, MessageSquareQuote, CircleCheckBig, Smile, Check, X, CircleX, ArrowRight, Droplets, Moon, Headphones, AlertCircle, TriangleAlert, Leaf, ShieldCheck, Truck } from "lucide-react";
 import { TopBar } from "@/components/sections/TopBar";
-
 const Index = () => {
   // State management
   const [showMobileCTA, setShowMobileCTA] = useState(true);
   const [activeStep, setActiveStep] = useState(1);
-
   const whatsappNumber = "919876543210";
   const whatsappMessage = encodeURIComponent("मुझे इंटिमेट वेलनेस ट्रीटमेंट के बारे में जानकारी चाहिए");
-
-  const testimonials = [
-    {
-      name: "प्रिया शर्मा",
-      initial: "P",
-      city: "28 साल, मुंबई",
-      text: '"मेरी शादी 3 महीने बाद थी और मैं बहुत परेशान थी। <span class="font-bold text-foreground">बिकिनी एरिया का कालापन</span> मुझे रात भर सोने नहीं देता था। ReYoni का इस्तेमाल करने के बाद <span class="font-bold text-primary">सिर्फ 15 दिनों में</span> मुझे फर्क दिखने लगा। आज मैं पूरी तरह <span class="font-bold">confident</span> हूं!"',
-      rating: 5,
-      icon: "heart"
-    },
-    {
-      name: "अनीता वर्मा",
-      initial: "A",
-      city: "32 साल, दिल्ली",
-      text: '"डिलीवरी के बाद मुझे <span class="font-bold text-foreground">vaginal looseness</span> की बहुत परेशानी थी। पार्टनर के साथ <span class="font-bold text-foreground">intimacy</span> में कमी आ गई थी और मैं बहुत depressed थी। ReYoni ने मेरी ज़िंदगी बदल दी! <span class="font-bold text-primary">3 हफ्तों में ही</span> मुझे और मेरे पार्टनर को बहुत फर्क महसूस हुआ। Thank you so much!"',
-      rating: 5,
-      icon: "sparkles"
-    },
-    {
-      name: "रीना पटेल",
-      initial: "R",
-      city: "26 साल, बैंगलोर",
-      text: '"मैं बीच पर <span class="font-bold text-foreground">bikini</span> पहनने से डरती थी क्योंकि <span class="font-bold text-foreground">प्राइवेट पार्ट्स का कालापन</span> बहुत ज्यादा था। मैंने बहुत सारे products try किए लेकिन कुछ काम नहीं आया। ReYoni के साथ <span class="font-bold text-primary">2 हफ्तों में</span> मुझे असली फर्क दिखा! अब मैं हर तरह के कपड़े पहनने में confident हूं। इससे बेहतर कुछ नहीं!"',
-      rating: 5,
-      icon: "heart"
-    },
-    {
-      name: "नेहा गुप्ता",
-      initial: "N",
-      city: "30 साल, पुणे",
-      text: '"शादी के 5 साल बाद मेरा <span class="font-bold text-foreground">relationship</span> अच्छा नहीं चल रहा था। <span class="font-bold text-foreground">Intimacy issues</span> की वजह से मैं और मेरे पति में दूरी बढ़ती जा रही थी। ReYoni ने हमारी शादी बचा ली! <span class="font-bold text-primary">अब हम पहले से ज्यादा खुश हैं।</span> यह product वाकई जादू है। Every married woman should try this!"',
-      rating: 5,
-      icon: "heart"
-    },
-    {
-      name: "सिमरन कौर",
-      initial: "S",
-      city: "24 साल, चंडीगढ़",
-      text: '"मैं <span class="font-bold text-foreground">gym</span> जाती हूं और अक्सर <span class="font-bold text-foreground">tight clothes</span> पहनती हूं। लेकिन बिकिनी एरिया की <span class="font-bold text-foreground">darkness</span> मुझे बहुत uncomfortable feel करवाती थी। मैंने ReYoni try किया और <span class="font-bold text-primary">10 दिनों में ही</span> फर्क देखने को मिला! अब मैं किसी भी तरह के कपड़े पहनने में confident हूं। Highly recommended!"',
-      rating: 5,
-      icon: "heart"
-    },
-    {
-      name: "मीरा देसाई",
-      initial: "M",
-      city: "35 साल, अहमदाबाद",
-      text: '"दो बच्चों के बाद मुझे लगता था कि अब मैं कभी पहले जैसी नहीं हो सकती। लेकिन ReYoni ने मुझे गलत साबित कर दिया! <span class="font-bold text-primary">महीने में</span> मुझे ऐसा लगा जैसे मैं फिर से young हूं। मेरा confidence वापस आ गया है और मेरी personal life भी बहुत improve हुई है। हर महिला को यह try करना चाहिए!"',
-      rating: 5,
-      icon: "smile"
-    }
-  ];
-
-  return (
-    <>
+  const testimonials = [{
+    name: "प्रिया शर्मा",
+    initial: "P",
+    city: "28 साल, मुंबई",
+    text: '"मेरी शादी 3 महीने बाद थी और मैं बहुत परेशान थी। <span class="font-bold text-foreground">बिकिनी एरिया का कालापन</span> मुझे रात भर सोने नहीं देता था। ReYoni का इस्तेमाल करने के बाद <span class="font-bold text-primary">सिर्फ 15 दिनों में</span> मुझे फर्क दिखने लगा। आज मैं पूरी तरह <span class="font-bold">confident</span> हूं!"',
+    rating: 5,
+    icon: "heart"
+  }, {
+    name: "अनीता वर्मा",
+    initial: "A",
+    city: "32 साल, दिल्ली",
+    text: '"डिलीवरी के बाद मुझे <span class="font-bold text-foreground">vaginal looseness</span> की बहुत परेशानी थी। पार्टनर के साथ <span class="font-bold text-foreground">intimacy</span> में कमी आ गई थी और मैं बहुत depressed थी। ReYoni ने मेरी ज़िंदगी बदल दी! <span class="font-bold text-primary">3 हफ्तों में ही</span> मुझे और मेरे पार्टनर को बहुत फर्क महसूस हुआ। Thank you so much!"',
+    rating: 5,
+    icon: "sparkles"
+  }, {
+    name: "रीना पटेल",
+    initial: "R",
+    city: "26 साल, बैंगलोर",
+    text: '"मैं बीच पर <span class="font-bold text-foreground">bikini</span> पहनने से डरती थी क्योंकि <span class="font-bold text-foreground">प्राइवेट पार्ट्स का कालापन</span> बहुत ज्यादा था। मैंने बहुत सारे products try किए लेकिन कुछ काम नहीं आया। ReYoni के साथ <span class="font-bold text-primary">2 हफ्तों में</span> मुझे असली फर्क दिखा! अब मैं हर तरह के कपड़े पहनने में confident हूं। इससे बेहतर कुछ नहीं!"',
+    rating: 5,
+    icon: "heart"
+  }, {
+    name: "नेहा गुप्ता",
+    initial: "N",
+    city: "30 साल, पुणे",
+    text: '"शादी के 5 साल बाद मेरा <span class="font-bold text-foreground">relationship</span> अच्छा नहीं चल रहा था। <span class="font-bold text-foreground">Intimacy issues</span> की वजह से मैं और मेरे पति में दूरी बढ़ती जा रही थी। ReYoni ने हमारी शादी बचा ली! <span class="font-bold text-primary">अब हम पहले से ज्यादा खुश हैं।</span> यह product वाकई जादू है। Every married woman should try this!"',
+    rating: 5,
+    icon: "heart"
+  }, {
+    name: "सिमरन कौर",
+    initial: "S",
+    city: "24 साल, चंडीगढ़",
+    text: '"मैं <span class="font-bold text-foreground">gym</span> जाती हूं और अक्सर <span class="font-bold text-foreground">tight clothes</span> पहनती हूं। लेकिन बिकिनी एरिया की <span class="font-bold text-foreground">darkness</span> मुझे बहुत uncomfortable feel करवाती थी। मैंने ReYoni try किया और <span class="font-bold text-primary">10 दिनों में ही</span> फर्क देखने को मिला! अब मैं किसी भी तरह के कपड़े पहनने में confident हूं। Highly recommended!"',
+    rating: 5,
+    icon: "heart"
+  }, {
+    name: "मीरा देसाई",
+    initial: "M",
+    city: "35 साल, अहमदाबाद",
+    text: '"दो बच्चों के बाद मुझे लगता था कि अब मैं कभी पहले जैसी नहीं हो सकती। लेकिन ReYoni ने मुझे गलत साबित कर दिया! <span class="font-bold text-primary">महीने में</span> मुझे ऐसा लगा जैसे मैं फिर से young हूं। मेरा confidence वापस आ गया है और मेरी personal life भी बहुत improve हुई है। हर महिला को यह try करना चाहिए!"',
+    rating: 5,
+    icon: "smile"
+  }];
+  return <>
       <TopBar />
       <div className="min-h-screen bg-background overflow-x-hidden">
         {/* Hero Section */}
@@ -113,9 +96,7 @@ const Index = () => {
                 <span className="text-primary font-bold">50,000+</span> खुश महिलाएं
               </span>
               <div className="flex items-center gap-0.5 ml-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
               </div>
             </div>
           </div>
@@ -149,11 +130,7 @@ const Index = () => {
               <div className="relative z-10 animate-float w-full max-w-[480px] mx-auto lg:hidden">
                 <div className="aspect-[4/5] sm:aspect-square bg-white rounded-[2.5rem] p-4 shadow-xl shadow-red-500/20 relative overflow-hidden group border border-primary/5">
                   <div className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-inner bg-cream/10">
-                    <img 
-                      src={mainHeroImage}
-                      className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
-                      alt="ReYoni Premium Product"
-                    />
+                    <img src={mainHeroImage} className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110" alt="ReYoni Premium Product" />
 
                     {/* Premium Badge (Top Left) */}
                     <div className="absolute top-5 left-5 z-20">
@@ -232,11 +209,7 @@ const Index = () => {
               <div className="relative z-10 animate-float w-full max-w-[480px]">
                 <div className="aspect-[4/5] sm:aspect-square bg-white rounded-[2.5rem] p-4 shadow-xl shadow-red-500/20 relative overflow-hidden group border border-primary/5">
                   <div className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-inner bg-cream/10">
-                    <img 
-                      src={mainHeroImage}
-                      className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
-                      alt="ReYoni Premium Product"
-                    />
+                    <img src={mainHeroImage} className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110" alt="ReYoni Premium Product" />
 
                     {/* Premium Badge (Top Left) */}
                     <div className="absolute top-5 left-5 z-20">
@@ -342,16 +315,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
             {/* Result 1 */}
             <div className="space-y-4 animate-fade-in">
-              <BeforeAfterSlider 
-                beforeImage={before1}
-                afterImage={after1}
-              />
+              <BeforeAfterSlider beforeImage={before1} afterImage={after1} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -369,17 +337,14 @@ const Index = () => {
             </div>
 
             {/* Result 2 */}
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <BeforeAfterSlider 
-                beforeImage={before2}
-                afterImage={after2}
-              />
+            <div className="space-y-4 animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
+              <BeforeAfterSlider beforeImage={before2} afterImage={after2} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -397,17 +362,14 @@ const Index = () => {
             </div>
 
             {/* Result 3 */}
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <BeforeAfterSlider 
-                beforeImage={before3}
-                afterImage={after3}
-              />
+            <div className="space-y-4 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
+              <BeforeAfterSlider beforeImage={before3} afterImage={after3} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -425,17 +387,14 @@ const Index = () => {
             </div>
 
             {/* Result 4 */}
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <BeforeAfterSlider 
-                beforeImage={before4}
-                afterImage={after4}
-              />
+            <div className="space-y-4 animate-fade-in" style={{
+              animationDelay: '0.3s'
+            }}>
+              <BeforeAfterSlider beforeImage={before4} afterImage={after4} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -453,17 +412,14 @@ const Index = () => {
             </div>
 
             {/* Result 5 */}
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <BeforeAfterSlider 
-                beforeImage={before5}
-                afterImage={after5}
-              />
+            <div className="space-y-4 animate-fade-in" style={{
+              animationDelay: '0.4s'
+            }}>
+              <BeforeAfterSlider beforeImage={before5} afterImage={after5} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -481,17 +437,14 @@ const Index = () => {
             </div>
 
             {/* Result 6 */}
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <BeforeAfterSlider 
-                beforeImage={before6}
-                afterImage={after6}
-              />
+            <div className="space-y-4 animate-fade-in" style={{
+              animationDelay: '0.5s'
+            }}>
+              <BeforeAfterSlider beforeImage={before6} afterImage={after6} />
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
                   <span className="text-sm font-bold text-muted-foreground">5.0</span>
                 </div>
@@ -578,77 +531,7 @@ const Index = () => {
       </section>
 
       {/* Real Customer Stories Section */}
-      <section className="section-padding bg-gradient-to-b from-background via-secondary/10 to-background">
-        <div className="container-custom">
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full mb-6">
-              <MessageSquareQuote className="w-5 h-5" />
-              <span className="text-sm font-bold uppercase tracking-wider">असली कहानियां</span>
-            </div>
-            
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6">
-              <span className="text-gradient">महिलाओं की</span> अपनी जुबानी<br />
-              <span className="relative inline-block">
-                उनकी सच्ची कहानी
-                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
-                  <path d="M2 10C50 2 150 2 198 10" stroke="hsl(var(--primary))" strokeWidth="6" strokeLinecap="round" opacity="0.4" />
-                </svg>
-              </span>
-            </h2>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              जो महिलाएं पहले शर्मिंदा थीं, आज <span className="text-gradient font-bold">confident</span> हैं।<br />
-              पढ़िए उनकी अपनी कहानी, अपनी जुबानी...
-            </p>
-          </div>
-
-          {/* Social Proof Banner */}
-          <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8 md:p-12 text-center">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                आप अकेली नहीं हैं - <span className="text-gradient">हजारों महिलाएं</span> बदलाव ला चुकी हैं!
-              </h3>
-              <p className="text-muted-foreground mb-6 text-lg">
-                हर दिन <span className="font-bold text-foreground">500+ महिलाएं</span> ReYoni से अपनी ज़िंदगी बदल रही हैं।
-                <br />
-                अब आपकी बारी है!
-              </p>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">4.9/5</div>
-                  <div className="text-sm text-muted-foreground">Average Rating</div>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">50K+</div>
-                  <div className="text-sm text-muted-foreground">Happy Customers</div>
-                </div>
-                
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">97%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
-                </div>
-                
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="text-3xl md:text-4xl font-extrabold text-primary mb-2">15 दिन</div>
-                  <div className="text-sm text-muted-foreground">Average Results</div>
-                </div>
-              </div>
-
-              <button className="btn-primary group">
-                मैं भी बदलाव चाहती हूं!
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Shocking Truth Section */}
       <section className="section-padding bg-foreground text-background">
@@ -894,20 +777,16 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="card-elevated space-y-4 relative hover:shadow-glow transition-all duration-300 border-primary/20">
+            {testimonials.map((testimonial, index) => <Card key={index} className="card-elevated space-y-4 relative hover:shadow-glow transition-all duration-300 border-primary/20">
                 <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
                 
                 <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 
-                <div 
-                  className="text-foreground leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: testimonial.text }}
-                />
+                <div className="text-foreground leading-relaxed" dangerouslySetInnerHTML={{
+                __html: testimonial.text
+              }} />
                 {testimonial.icon === "heart" && <Heart className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
                 {testimonial.icon === "sparkles" && <Sparkles className="w-4 h-4 text-primary fill-primary inline-block ml-1" />}
                 {testimonial.icon === "smile" && <Smile className="w-4 h-4 text-primary inline-block ml-1" />}
@@ -924,8 +803,7 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground">{testimonial.city}</p>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Stats Section */}
@@ -970,11 +848,7 @@ const Index = () => {
                 {/* Doctor Profile */}
                 <div className="flex items-start gap-6 mb-6">
                   <div className="size-28 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shrink-0 p-2">
-                    <img 
-                      src={doctorImage} 
-                      alt="Dr. Meera Sharma - Gynecologist" 
-                      className="w-full h-full object-cover rounded-sm"
-                    />
+                    <img src={doctorImage} alt="Dr. Meera Sharma - Gynecologist" className="w-full h-full object-cover rounded-sm" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">Dr. Meera Sharma</h3>
@@ -1028,21 +902,12 @@ const Index = () => {
               </p>
 
               <div className="space-y-4">
-                {[
-                  "Dermatologically Tested & Approved",
-                  "pH Balanced Formula (4.5-5.5)",
-                  "100% Natural Ayurvedic Herbs",
-                  "No Harmful Chemicals",
-                  "Safe for Daily Use",
-                  "No Side Effects Reported"
-                ].map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                {["Dermatologically Tested & Approved", "pH Balanced Formula (4.5-5.5)", "100% Natural Ayurvedic Herbs", "No Harmful Chemicals", "Safe for Daily Use", "No Side Effects Reported"].map((benefit, index) => <div key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shrink-0">
                       <CircleCheckBig className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <span className="font-medium">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -1073,19 +938,10 @@ const Index = () => {
             <Card className="card-elevated bg-primary text-primary-foreground ring-4 ring-primary/20">
               <h3 className="text-xl font-bold mb-4 text-center">ReYoni</h3>
               <ul className="space-y-3">
-                {[
-                  "Visible whitening results",
-                  "Natural tightening effect",
-                  "24-hour freshness",
-                  "Clinically tested",
-                  "pH-balanced formula",
-                  "Use at home"
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["Visible whitening results", "Natural tightening effect", "24-hour freshness", "Clinically tested", "pH-balanced formula", "Use at home"].map((feature, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <Check className="w-5 h-5 flex-shrink-0" />
                     <span>{feature}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </Card>
 
@@ -1093,19 +949,10 @@ const Index = () => {
             <Card className="card-elevated border-border/50">
               <h3 className="text-xl font-bold mb-4 text-center text-foreground">Local Creams</h3>
               <ul className="space-y-3">
-                {[
-                  "Temporary effects only",
-                  "No tightening benefit",
-                  "Short-lasting freshness",
-                  "Often untested",
-                  "May disrupt pH",
-                  "Risk of irritation"
-                ].map((issue, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["Temporary effects only", "No tightening benefit", "Short-lasting freshness", "Often untested", "May disrupt pH", "Risk of irritation"].map((issue, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <X className="w-5 h-5 text-destructive flex-shrink-0" />
                     <span className="text-muted-foreground">{issue}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </Card>
 
@@ -1113,19 +960,10 @@ const Index = () => {
             <Card className="card-elevated border-border/50">
               <h3 className="text-xl font-bold mb-4 text-center text-foreground">Home Remedies</h3>
               <ul className="space-y-3">
-                {[
-                  "Unpredictable results",
-                  "No proven tightening",
-                  "Minimal odour control",
-                  "No clinical backing",
-                  "Can cause reactions",
-                  "Time-consuming"
-                ].map((issue, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["Unpredictable results", "No proven tightening", "Minimal odour control", "No clinical backing", "Can cause reactions", "Time-consuming"].map((issue, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <X className="w-5 h-5 text-destructive flex-shrink-0" />
                     <span className="text-muted-foreground">{issue}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </Card>
 
@@ -1133,19 +971,10 @@ const Index = () => {
             <Card className="card-elevated border-border/50">
               <h3 className="text-xl font-bold mb-4 text-center text-foreground">Parlour Treatments</h3>
               <ul className="space-y-3">
-                {[
-                  "Expensive sessions",
-                  "Temporary results",
-                  "Requires multiple visits",
-                  "Privacy concerns",
-                  "Inconvenient",
-                  "Often painful"
-                ].map((issue, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["Expensive sessions", "Temporary results", "Requires multiple visits", "Privacy concerns", "Inconvenient", "Often painful"].map((issue, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <X className="w-5 h-5 text-destructive flex-shrink-0" />
                     <span className="text-muted-foreground">{issue}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </Card>
           </div>
@@ -1277,10 +1106,7 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-4">
               सही विकल्प है <span className="text-gradient">ReYoni</span> — प्राकृतिक, सुरक्षित, प्रभावी
             </p>
-            <a 
-              href="#lead-form" 
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-            >
+            <a href="#lead-form" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
               परिवर्तन अभी शुरू करें
               <ArrowRight className="h-4 w-4" />
             </a>
@@ -1461,10 +1287,7 @@ const Index = () => {
               <Heart className="w-5 h-5 text-primary fill-primary" />
               <span className="font-semibold">50,000+</span> महिलाओं को ये results मिले!
             </p>
-            <a
-              href="#lead-form"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] font-bold tracking-wide py-6 h-14 rounded-xl px-10 text-lg group"
-            >
+            <a href="#lead-form" className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] font-bold tracking-wide py-6 h-14 rounded-xl px-10 text-lg group">
               मुझे भी ये Results चाहिए →
             </a>
           </div>
@@ -1486,19 +1309,8 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Step 1 - Cleanse */}
-              <div
-                onClick={() => setActiveStep(1)}
-                className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${
-                  activeStep === 1
-                    ? 'border-primary shadow-glow scale-105'
-                    : 'border-border/50 hover:border-primary/30'
-                }`}
-              >
-                <div
-                  className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${
-                    1 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-                  }`}
-                >
+              <div onClick={() => setActiveStep(1)} className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${activeStep === 1 ? 'border-primary shadow-glow scale-105' : 'border-border/50 hover:border-primary/30'}`}>
+                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${1 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
                   {1 < activeStep ? <Check className="w-5 h-5" /> : 1}
                 </div>
                 <div className="text-center">
@@ -1515,19 +1327,8 @@ const Index = () => {
               </div>
 
               {/* Step 2 - Apply */}
-              <div
-                onClick={() => setActiveStep(2)}
-                className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${
-                  activeStep === 2
-                    ? 'border-primary shadow-glow scale-105'
-                    : 'border-border/50 hover:border-primary/30'
-                }`}
-              >
-                <div
-                  className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${
-                    2 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-                  }`}
-                >
+              <div onClick={() => setActiveStep(2)} className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${activeStep === 2 ? 'border-primary shadow-glow scale-105' : 'border-border/50 hover:border-primary/30'}`}>
+                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${2 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
                   {2 < activeStep ? <Check className="w-5 h-5" /> : 2}
                 </div>
                 <div className="text-center">
@@ -1544,19 +1345,8 @@ const Index = () => {
               </div>
 
               {/* Step 3 - Massage */}
-              <div
-                onClick={() => setActiveStep(3)}
-                className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${
-                  activeStep === 3
-                    ? 'border-primary shadow-glow scale-105'
-                    : 'border-border/50 hover:border-primary/30'
-                }`}
-              >
-                <div
-                  className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${
-                    3 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 3 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-                  }`}
-                >
+              <div onClick={() => setActiveStep(3)} className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${activeStep === 3 ? 'border-primary shadow-glow scale-105' : 'border-border/50 hover:border-primary/30'}`}>
+                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${3 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 3 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
                   {3 < activeStep ? <Check className="w-5 h-5" /> : 3}
                 </div>
                 <div className="text-center">
@@ -1573,19 +1363,8 @@ const Index = () => {
               </div>
 
               {/* Step 4 - Feel Fresh */}
-              <div
-                onClick={() => setActiveStep(4)}
-                className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${
-                  activeStep === 4
-                    ? 'border-primary shadow-glow scale-105'
-                    : 'border-border/50 hover:border-primary/30'
-                }`}
-              >
-                <div
-                  className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${
-                    4 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 4 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-                  }`}
-                >
+              <div onClick={() => setActiveStep(4)} className={`relative bg-background rounded-3xl p-8 shadow-soft border-2 transition-all duration-500 cursor-pointer ${activeStep === 4 ? 'border-primary shadow-glow scale-105' : 'border-border/50 hover:border-primary/30'}`}>
+                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${4 < activeStep ? 'bg-primary text-primary-foreground' : activeStep === 4 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
                   {4 < activeStep ? <Check className="w-5 h-5" /> : 4}
                 </div>
                 <div className="text-center">
@@ -1604,16 +1383,7 @@ const Index = () => {
 
             {/* Navigation Dots */}
             <div className="flex justify-center gap-2 mt-12">
-              {[1, 2, 3, 4].map((step) => (
-                <button
-                  key={step}
-                  onClick={() => setActiveStep(step)}
-                  className={`h-3 rounded-full transition-all duration-300 ${
-                    activeStep === step ? 'bg-primary w-8' : 'bg-muted hover:bg-primary/50 w-3'
-                  }`}
-                  aria-label={`Go to step ${step}`}
-                />
-              ))}
+              {[1, 2, 3, 4].map(step => <button key={step} onClick={() => setActiveStep(step)} className={`h-3 rounded-full transition-all duration-300 ${activeStep === step ? 'bg-primary w-8' : 'bg-muted hover:bg-primary/50 w-3'}`} aria-label={`Go to step ${step}`} />)}
             </div>
           </div>
 
@@ -1787,11 +1557,7 @@ const Index = () => {
 
             <div className="relative mx-auto max-w-lg">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 blur-2xl"></div>
-              <img 
-                src={doctorImage} 
-                alt="Natural Ayurvedic Ingredients" 
-                className="relative rounded-3xl shadow-card" 
-              />
+              <img src={doctorImage} alt="Natural Ayurvedic Ingredients" className="relative rounded-3xl shadow-card" />
             </div>
           </div>
 
@@ -1905,10 +1671,7 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground mb-4">
                   <span className="font-semibold">50% OFF</span> + Free Shipping
                 </p>
-                <a
-                  href="#order"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-glow w-full md:w-auto"
-                >
+                <a href="#order" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-glow w-full md:w-auto">
                   अभी Order करें →
                 </a>
                 <p className="text-sm text-muted-foreground mt-3">COD Available | Discreet Packaging</p>
@@ -2113,18 +1876,10 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-2">और कोई सवाल है?</p>
             <p className="text-sm text-muted-foreground mb-6">WhatsApp पर हमसे बात करें या अभी order करें!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#lead-form"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-glow"
-              >
+              <a href="#lead-form" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-glow">
                 अभी Order करें →
               </a>
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-background text-foreground border-2 border-border px-8 py-4 rounded-full font-semibold text-lg hover:border-primary hover:bg-card transition-all"
-              >
+              <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-background text-foreground border-2 border-border px-8 py-4 rounded-full font-semibold text-lg hover:border-primary hover:bg-card transition-all">
                 WhatsApp करें 💬
               </a>
             </div>
@@ -2166,11 +1921,7 @@ const Index = () => {
             </div>
             <p className="text-xs text-muted-foreground">मुफ्त शिपिंग • COD</p>
           </div>
-          <a
-            href="#lead-form"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] h-12 rounded-xl px-8 text-base shrink-0"
-            onClick={() => setShowMobileCTA(false)}
-          >
+          <a href="#lead-form" className="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] h-12 rounded-xl px-8 text-base shrink-0" onClick={() => setShowMobileCTA(false)}>
             <Sparkles className="w-4 h-4" />
             अभी ऑर्डर करें
           </a>
@@ -2178,17 +1929,10 @@ const Index = () => {
       </div>
 
       {/* WhatsApp Floating Button */}
-      <a
-        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 z-50 animate-pulse-soft"
-      >
+      <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="hidden md:flex fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 z-50 animate-pulse-soft">
         <Phone className="w-8 h-8 text-white" />
       </a>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Index;
