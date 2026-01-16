@@ -31,7 +31,7 @@ export function OrderBlock() {
               <div className="p-8">
                 <div className="flex justify-center">
                   <video controls className="w-full rounded-lg overflow-hidden">
-                    <source src="/video/ad-video.mp4" type="video/mp4" />
+                    <source src={`${import.meta.env.BASE_URL}video/ad-video.mp4`} type="video/mp4" />
                   </video>
                 </div>
               </div>

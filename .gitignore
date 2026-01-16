@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+reyoni-hindi/**
 
 # Editor directories and files
 .vscode/*

@@ -73,7 +73,15 @@ const BenefitCard = ({ title, description, badge, points, image, imageAlt, rever
         <div
           className={`relative w-full max-w-md aspect-square bg-white rounded-4xl overflow-hidden flex items-center justify-center border shadow-2xl transition-transform duration-500 group-hover/card:scale-[1.02] ${styles.imageBox}`}
         >
-          <img src={image} alt={imageAlt} className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+          <img
+            src={image}
+            alt={imageAlt}
+            width="400"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+          />
           <div className={`absolute inset-0 bg-linear-to-t ${styles.overlay} to-transparent opacity-60`}></div>
         </div>
       </div>
@@ -122,7 +130,7 @@ export function DetailedBenefits() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden detailed-benefits-section">
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-red-200 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-gold-light rounded-full blur-3xl"></div>

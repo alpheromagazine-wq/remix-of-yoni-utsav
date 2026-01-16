@@ -19,7 +19,7 @@ export function DrRecomendation() {
               {/* Doctor Profile */}
               <div className="flex items-start gap-6 mb-6">
                 <div className="size-28 bg-linear-to-br from-primary to-accent rounded-2xl flex items-center justify-center shrink-0 p-2">
-                  <img src={doctorImage} alt="Dr. Meera Sharma - Gynecologist" className="w-full h-full object-cover rounded-sm" />
+                  <img src={doctorImage} alt="Dr. Meera Sharma - Gynecologist" width="112" height="112" loading="lazy" decoding="async" className="w-full h-full object-cover rounded-sm" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Dr. Meera Sharma</h3>

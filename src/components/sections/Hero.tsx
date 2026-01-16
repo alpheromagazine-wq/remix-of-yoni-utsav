@@ -21,11 +21,11 @@ export const Hero = () => {
         <div className="text-center mb-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-md shadow-red-500/20 bg-white scale-90 md:scale-100">
             <div className="flex -space-x-3">
-              <img src={womanAvatar1} className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 1" />
-              <img src={womanAvatar2} className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 2" />
-              <img src={womanAvatar3} className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 3" />
-              <img src={womanAvatar4} className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 4" />
-              <img src={womanAvatar5} className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 5" />
+              <img src={womanAvatar1} width="32" height="32" className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 1" />
+              <img src={womanAvatar2} width="32" height="32" className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 2" />
+              <img src={womanAvatar3} width="32" height="32" className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 3" />
+              <img src={womanAvatar4} width="32" height="32" className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 4" />
+              <img src={womanAvatar5} width="32" height="32" className="w-8 h-8 rounded-full border-2 border-card object-cover shrink-0" alt="Woman Avatar 5" />
             </div>
             <span className="text-xs sm:text-sm font-medium text-foreground">
               <span className="text-primary font-bold">50,000+</span> खुश महिलाएं
@@ -70,7 +70,13 @@ export const Hero = () => {
             <div className="relative z-10 animate-float w-full max-w-[480px] mx-auto lg:hidden">
               <div className="aspect-4/5 sm:aspect-square bg-white rounded-[2.5rem] p-4 shadow-xl shadow-red-500/20 relative overflow-hidden group border border-primary/5">
                 <div className="w-full h-full rounded-4xl overflow-hidden relative shadow-inner bg-cream/10">
-                  <img src={mainHeroImage} className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110" alt="ReYoni Premium Product" />
+                  <img
+                    src={mainHeroImage}
+                    width="480"
+                    height="480"
+                    className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
+                    alt="ReYoni Premium Product"
+                  />
 
                   <div className="absolute top-5 left-5 z-20">
                     <div className="bg-primary/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2 border border-white/20">
@@ -81,7 +87,7 @@ export const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="absolute top-4 md:top-5 right-0 md:right-5 z-20">
+                  <div className="absolute top-4 md:top-5 right-0 md:right-5 z-20 min-w-[120px] min-h-[40px]">
                     <div className="bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl border border-primary/10 flex items-center gap-2 transform transition-transform duration-500 group-hover:translate-x-1">
                       <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <ShieldCheck className="w-3.5 h-3.5" />
@@ -156,7 +162,9 @@ export const Hero = () => {
                 <div className="w-full h-full rounded-4xl overflow-hidden relative shadow-inner bg-cream/10">
                   <img
                     src={mainHeroImage}
-                    fetchPriority="high"
+                    width="480"
+                    height="480"
+                    loading="eager"
                     decoding="async"
                     className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
                     alt="ReYoni Premium Product"
@@ -171,7 +179,7 @@ export const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="absolute top-4 md:top-5 right-0 md:right-5 z-20">
+                  <div className="absolute top-4 md:top-5 right-0 md:right-5 z-20 min-w-[120px] min-h-[40px]">
                     <div className="bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl border border-primary/10 flex items-center gap-2 transform transition-transform duration-500 group-hover:translate-x-1">
                       <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <ShieldCheck className="w-3.5 h-3.5" />

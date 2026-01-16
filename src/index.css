@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 @import "tailwindcss";
 
 /* =========================
@@ -257,6 +257,7 @@ button {
     color: hsl(var(--primary-foreground));
     box-shadow: var(--shadow-cta);
     animation: pulse-glow 2s infinite;
+    will-change: box-shadow;
   }
 
   .btn-outline {
@@ -276,14 +277,17 @@ button {
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
-  .animate-pulse-soft {
-    animation: pulseSoft 2s ease-in-out infinite;
-  }
   .animate-float {
     animation: float 3s ease-in-out infinite;
+    will-change: transform;
+  }
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+    will-change: transform;
   }
   .animate-shimmer {
     animation: shimmer 2s linear infinite;
+    will-change: transform;
   }
 
   .animate-bounce-soft {
@@ -480,4 +484,8 @@ button {
 * {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+}
+#pricing, #faq, footer, .detailed-benefits-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
 }

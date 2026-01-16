@@ -58,7 +58,7 @@ export const Ingredients = () => {
           </div>
           <div className="relative mx-auto max-w-lg">
             <div className="absolute -inset-4 rounded-3xl bg-linear-to-br from-primary/10 to-accent/10 blur-2xl"></div>
-            <img src={ingredientsImage} alt="Natural Ayurvedic Ingredients" className="relative rounded-3xl shadow-card" />
+            <img src={ingredientsImage} alt="Natural Ayurvedic Ingredients" width="500" height="500" loading="lazy" decoding="async" className="relative rounded-3xl shadow-card" />
           </div>
         </div>
         <div className="mt-16 rounded-2xl bg-red-50 border-red-200 border p-8 text-center">

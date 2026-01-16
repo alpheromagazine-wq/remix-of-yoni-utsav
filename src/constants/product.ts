@@ -8,7 +8,7 @@ export const PRODUCT_DETAILS = {
   
   // API / Form Details
   formAction: "/reyoni-hindi/v1/order/leads.php",
-  lpName: "lp1",
+  lpName: "lp3",
   lpLang: "hindi",
   packagePriceId: "1-2490", // This matches the format expected by the backend
   brandName: "ReYoni",
